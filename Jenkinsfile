@@ -17,16 +17,11 @@ pipeline {
       }
     }
      
-    stage('Test') {
-      steps {
-         sh 'npm test'
+    stage('Package') {
+      steps  {
+        sh 'npm run package'
       }
     }
-	stage('Package') {
-	  steps  {
-		sh 'npm run package'
-	  }
-	}
 	
   }
  
